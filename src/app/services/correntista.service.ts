@@ -7,15 +7,10 @@ const baseUrl = 'http://localhost:8080';
 @Injectable({
   providedIn: 'root'
 })
-export class MovimentacaoService {
-
+export class CorrentistaService {
   constructor(private http: HttpClient) { }
-
+  
   list(): Observable<any> {
-    return this.http.get(`${baseUrl}/movimentacoes`);
-  }
-  // adicionando o método de inclusão (POST) via API
-  create(movimentacao: any): Observable<any> {
-    return this.http.post(`${baseUrl}/movimentacoes`, movimentacao);
+    return this.http.get(`${baseUrl}/correntistas`);
   }
 }
